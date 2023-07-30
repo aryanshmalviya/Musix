@@ -13,7 +13,7 @@ const Header: React.FC<HeaderProps> =({
     children,
     className
 })=>{
-    const router = useRouter    
+    const router: any = useRouter    
     const handleLogout = ()=>{
         // handle logout in the future 
     }
