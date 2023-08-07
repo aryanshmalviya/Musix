@@ -3,6 +3,7 @@
 import { useSessionContext, useSupabaseClient } from "@supabase/auth-helpers-react";
 import Modal from "./Modal";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 import { Auth } from "@supabase/auth-ui-react";
 import { ThemeSupa } from "@supabase/auth-ui-shared";
 import useAuthModal from "@/hooks/useAuthModal";
@@ -12,6 +13,13 @@ const AuthModal=()=>{
     const router = useRouter();
     const {session} = useSessionContext();
     const {onClose , isOpen} = useAuthModal();
+
+    useEffect(()=>{
+        if(session){
+            router.refresh();
+            onClose;
+        }
+    },[session , router , onClose]);
 
     const onChange = (open:boolean) =>{
         if(!open){
@@ -28,7 +36,7 @@ const AuthModal=()=>{
         >
             <Auth 
                 theme="dark"
-                providers={['github','google']}
+                providers={['github']}
                 magicLink
                 supabaseClient={supabaseClient}
                 appearance={{
