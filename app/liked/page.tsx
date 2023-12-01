@@ -3,8 +3,7 @@ import Image from "next/image";
 import getLikedSongs from "@/Actions/getLikedSongs";
 import Header from "@/components/Header";
 
-import LikedContent from "../../components/LikedContent";
-
+import LikedContent from "../../components/LikedContent"
 export const revalidate = 0;
 
 const Liked = async () => {
