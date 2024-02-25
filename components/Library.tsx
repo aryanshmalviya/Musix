@@ -34,7 +34,6 @@ const Library: React.FC<LibraryProps> = ({
 
         return uploadModal.onOpen();
     }
-    console.log("jkjkjkjkjkjkj" , songs)
     return(
         <div className="flex flex-col">
             <div 
@@ -44,6 +43,7 @@ const Library: React.FC<LibraryProps> = ({
                 justify-between
                 px-5
                 pt-4
+                
             "
             >
                 <div
@@ -51,6 +51,7 @@ const Library: React.FC<LibraryProps> = ({
                     inline-flex
                     items-center
                     gap-x-2
+                    
                 ">
                     <RiPlayList2Fill className="text-neutral-400" size={23}  />
                     <p
@@ -81,6 +82,7 @@ const Library: React.FC<LibraryProps> = ({
                 gap-y-2
                 mt-4
                 px-3
+                bg-black
             ">
                 {songs.map((item)=>(
                     <MediaItem

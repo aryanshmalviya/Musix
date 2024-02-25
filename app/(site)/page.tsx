@@ -11,8 +11,7 @@ export default async function Home(){
 
     return (
         <div className="
-            bg-neutral-900
-            rounded-lg
+        bg-[url('https://images.pexels.com/photos/2078076/pexels-photo-2078076.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')]
             h-full
             w-full
             overflow-hidden
@@ -25,7 +24,7 @@ export default async function Home(){
                         text-3xl
                         font-semibold
                     ">
-                        Welcome back
+                       <text className="italic font-bold">Welcome</text>
                     </h1>
                     <div className="
                         grid

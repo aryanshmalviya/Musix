@@ -45,7 +45,7 @@ const Sidebar : React.FC<SidebarProps> = ({
             md:flex
             flex-col
             gap-y-2
-            bg-black
+            
             h-full
             w-[300px]
             p-2
@@ -59,6 +59,8 @@ const Sidebar : React.FC<SidebarProps> = ({
                         gap-y-4
                         px-5
                         py-4
+                        bg-black
+                        
                     '>
                         {routes.map((item)=>(
                             <SidebarItem
